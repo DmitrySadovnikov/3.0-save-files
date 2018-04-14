@@ -17,6 +17,7 @@ defmodule PurplePerformance.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    get "/xxx", PageController, :xxx
   end
 
   # Other scopes may use custom stacks.

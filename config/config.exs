@@ -22,6 +22,14 @@ config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id]
 
+config :facebook,
+       app_id: System.get_env("FACEBOOK_APP_ID"),
+       app_secret: System.get_env("FACEBOOK_APP_SECRET"),
+       app_access_token: System.get_env("FACEBOOK_APP_ACCESS_TOKEN"),
+       graph_url: "https://graph.facebook.com/v2.11",
+       graph_video_url: "https://graph-video.facebook.com/v2.8"
+
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"
